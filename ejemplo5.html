@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos</title>
+</head>
+
+<body>
+    <h1>Objetos</h1>
+    <ul id="lista"></ul>
+
+    <script>
+        var obj = { id: 1, nombre: "Coca-Cola 1L", precio: 1.25, imagenUrl: "https://www.distribuidorabebidas.com.uy/wp-content/uploads/sites/31/2018/05/Coca-Cola-litro-retornable.jpg" };
+        var productos = [
+            { id: 2, nombre: "Margarina Mirasol", precio: 1.75, imagenUrl: "https://walmartsv.vtexassets.com/arquivos/ids/789930/69556_03.jpg?v=638931303277800000" },
+            { id: 3, nombre: "Tacos de res", precio: 3.50, imagenUrl: "https://familiakitchen.com/wp-content/uploads/2021/01/iStock-960337396-3beef-barbacoa-tacos-e1695391119564.jpg" },
+            { id: 4, nombre: "Pastel de Chocolate", precio: 10.50, imagenUrl: "https://media.istockphoto.com/id/478348860/es/foto/pastel-de-chocolate-con-chocolate-dulce-de-az%C3%BAcar-y-mantequilla-drizzled-y-curls-escarchado-de.jpg?s=612x612&w=0&k=20&c=7l38xUcyxyTPsN1dKJ3jDeoTobb7Tvk3iJT4LuRcods=" },
+        ];
+
+        productos.push(obj);
+
+
+        productos.forEach( x => {
+            var salida = `<li>
+                           <b>Identificador:</b> ${x.id} </br>
+                           <b>Nombre del articulo:</b> ${x.nombre} </br>
+                           <b>Valor del articulo:</b> $${x.precio} </br>
+                           <img src="${x.imagenUrl}" height="150" />
+                          </li>`;
+            document.getElementById('lista').innerHTML += salida;
+        });
+    </script>
+
+</body>
+
+</html>
